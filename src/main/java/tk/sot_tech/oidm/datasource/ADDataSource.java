@@ -89,9 +89,9 @@ public class ADDataSource extends AbstractDataSource {
 						RECON_OBJECT_PARAMETER + " parameter not set. Append field 'Additional parameters' with object name like '...,"
 						+ RECON_OBJECT_PARAMETER + "=User'");
 			}
-			searchChildDomains = "YES".equalsIgnoreCase(baseConfiguration.get(
+			searchChildDomains = Misc.toBoolean(baseConfiguration.get(
 					CONFIG_SEARCH_SUBDOMAINS));
-			useSsl = "YES".equalsIgnoreCase(parameters.getItParameters().get(BUNDLE.getString("lookup.config.ssl")));
+			useSsl = Misc.toBoolean(parameters.getItParameters().get(BUNDLE.getString("lookup.config.ssl")));
 			String searchDomain;
 			if (baseConfiguration.containsKey(RECON_PAGE_SIZE)) {
 				pageSize = Integer.decode(baseConfiguration.get(RECON_PAGE_SIZE));
