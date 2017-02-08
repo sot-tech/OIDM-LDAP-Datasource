@@ -91,7 +91,8 @@ public class ADDataSource extends AbstractDataSource {
 			}
 			searchChildDomains = Misc.toBoolean(baseConfiguration.get(
 					CONFIG_SEARCH_SUBDOMAINS));
-			useSsl = Misc.toBoolean(parameters.getItParameters().get(BUNDLE.getString("lookup.config.ssl")));
+			useSsl = Misc.toBoolean(
+				parameters.getItParameters().get(BUNDLE.getString("lookup.config.ssl")));
 			String searchDomain;
 			if (baseConfiguration.containsKey(RECON_PAGE_SIZE)) {
 				pageSize = Integer.decode(baseConfiguration.get(RECON_PAGE_SIZE));
